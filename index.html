@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Gestor de Produtividade</title>
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="app-header">
+      <div class="header-titles">
+        <h1>TaskFlow</h1>
+        <p>Gestão de operações e tarefas diárias</p>
+      </div>
+      <div class="task-stats">
+        <div class="stat-badge">
+          <span id="pending-count">0</span> Pendentes
+        </div>
+        <div class="stat-badge success">
+          <span id="completed-count">0</span> Concluídas
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="task-input-section">
+        <form id="task-form">
+          <div class="input-group">
+            <input 
+              type="text" 
+              id="task-input" 
+              placeholder="Ex: Desenvolver nova feature em JavaScript..." 
+              required
+              autocomplete="off"
+            >
+            <button type="submit" class="btn-primary">
+              <i class="ph ph-plus-circle"></i> Adicionar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="task-list-section">
+        <div class="list-header">
+          <h2>Suas Tarefas</h2>
+          <button id="clear-all-btn" class="btn-text danger">
+            Limpar Concluídas
+          </button>
+        </div>
+        
+        <ul id="task-list" class="task-list">
+          </ul>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
